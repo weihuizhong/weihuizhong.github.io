@@ -34,8 +34,8 @@
 					callback && callback();
 				}
 			}
-			load('img/fly.png',init);
-			load('img/em.png',init);
+			load('images/site-2.png',init);
+			load('images/site-2.png',init);
 			function init () {
 				 if(loaded==2){
 				 	console.log('loaded');
@@ -71,11 +71,11 @@
 			this.x = 130;
 			this.y = 350;
 			this.times;
-			this.width=jpg['img/fly.png'].width;
-			this.height=jpg['img/fly.png'].height;
+			this.width=jpg['images/site-2.png'].width;
+			this.height=jpg['images/site-2.png'].height;
 			var rs = this;
 			// console.log(rs);
-			feiji.drawImage(jpg['img/fly.png'], this.x, this.y);
+			feiji.drawImage(jpg['images/site-2.png'], this.x, this.y);
 			Fn = function(e){
 				if(e.keyCode ==37){ 
 					 clearInterval(rs.times);
@@ -111,7 +111,7 @@
 				 if(this.y<0){this.y =0}
 				 if(this.y>500-this.height){this.y = 500-this.height}
 				 	feiji.clearRect(this.x, this.y, this.width, this.height);
-				 	feiji.drawImage(jpg['img/fly.png'],this.x+=x,this.y+=y); 
+				 	feiji.drawImage(jpg['images/site-2.png'],this.x+=x,this.y+=y); 
 			}
 			fighter.prototype.left = function(){
 				this.move(-5,0);
@@ -132,12 +132,12 @@
 
 		}
 		function enemy (jpg,enemys,fighter) {
-			this.w = jpg['img/em.png'].width;
-			this.h = jpg['img/em.png'].height;
+			this.w = jpg['images/site-2.png'].width;
+			this.h = jpg['images/site-2.png'].height;
 			this.x = parseInt(Math.random()*(300-this.w));
 			this.y=0;
 			var rs = this;
-			feiji.drawImage(jpg['img/em.png'],this.x,this.y);
+			feiji.drawImage(jpg['images/site-2.png'],this.x,this.y);
 			this.timer = setInterval(function(){
 				if(rs.y>500||isGameOver){
 					rs.stop();
@@ -145,7 +145,7 @@
 				}
 				rs.check();
 				rs.clear();
-				feiji.drawImage(jpg['img/em.png'],rs.x,rs.y+=3);
+				feiji.drawImage(jpg['images/site-2.png'],rs.x,rs.y+=3);
 			},20);
 			enemy.prototype.clear=function (){
 				// console.log('clear')
